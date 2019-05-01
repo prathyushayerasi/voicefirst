@@ -1,0 +1,16 @@
+<script src="/socket.io/socket.io.js"></script>
+<script>
+  var socket = io();
+
+  // socket.emit('joinOrderRoom', {});
+  socket.on('orderUpdate', function(res){
+    console.log("Android Update", res);
+  });
+  socket.on('newOrder', function(res){
+    console.log("Restaurant Order", res);
+  });   
+
+
+
+  socket.emit('testEvent', {'some': 'some'});
+</script>

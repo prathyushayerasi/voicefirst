@@ -1,0 +1,467 @@
+{
+    "interactionModel": {
+        "languageModel": {
+            "invocationName": "restaurant",
+            "intents": [
+                {
+                    "name": "AMAZON.FallbackIntent",
+                    "samples": []
+                },
+                {
+                    "name": "AMAZON.CancelIntent",
+                    "samples": []
+                },
+                {
+                    "name": "AMAZON.HelpIntent",
+                    "samples": []
+                },
+                {
+                    "name": "AMAZON.StopIntent",
+                    "samples": []
+                },
+                {
+                    "name": "AMAZON.NavigateHomeIntent",
+                    "samples": []
+                },
+                {
+                    "name": "OrderIntent",
+                    "slots": [
+                        {
+                            "name": "menuItem",
+                            "type": "menuItem",
+                            "samples": [
+                                "{menuItem} of quantity {quantity}",
+                                "{menuItem} for {quantity}",
+                                "{quantity} {menuItem}",
+                                "{menuItem}"
+                            ]
+                        },
+                        {
+                            "name": "quantity",
+                            "type": "AMAZON.NUMBER",
+                            "samples": [
+                                "order for {quantity}",
+                                "it's {quantity}",
+                                "make it as {quantity}",
+                                "{quantity}"
+                            ]
+                        }
+                    ],
+                    "samples": [
+                        "{menuItem} please",
+                        "{quantity} {menuItem} please",
+                        "add {menuItem}",
+                        "add {menuItem} to my order",
+                        "can i find {menuItem} here",
+                        "can i get {menuItem} here ",
+                        "do you have {menuItem}",
+                        "can i get {menuItem}",
+                        "i am starving",
+                        "feeling hungry",
+                        "i am feeling hungry",
+                        "place my order",
+                        "place an order for {menuItem}",
+                        "order {quantity} {menuItem}",
+                        "order {quantity} of {menuItem}",
+                        "order for {menuItem}",
+                        "order for me",
+                        "order {menuItem}"
+                    ]
+                },
+                {
+                    "name": "ConfigIntent",
+                    "slots": [
+                        {
+                            "name": "tableNumber",
+                            "type": "AMAZON.NUMBER",
+                            "samples": [
+                                "set it to {tableNumber}",
+                                "change it to {tableNumber}",
+                                "{tableNumber}"
+                            ]
+                        }
+                    ],
+                    "samples": [
+                        "change table number",
+                        "go to settings",
+                        "change settings",
+                        "change to table number {tableNumber}",
+                        "change to {tableNumber} table",
+                        "modify this device to table number {tableNumber}",
+                        "change this device to table number {tableNumber}",
+                        "configure this device to table number {tableNumber}",
+                        "configure this device to {tableNumber} table"
+                    ]
+                },
+                {
+                    "name": "MenuIntent",
+                    "slots": [
+                        {
+                            "name": "mealType",
+                            "type": "mealType"
+                        }
+                    ],
+                    "samples": [
+                        "what's ther for today",
+                        "what the menu for {mealType}",
+                        "list {mealType} food items",
+                        "provide {mealType} items",
+                        "read out menu for me",
+                        "provide menu",
+                        "list the menu"
+                    ]
+                },
+                {
+                    "name": "AMAZON.RepeatIntent",
+                    "samples": []
+                },
+                {
+                    "name": "BillIntent",
+                    "slots": [],
+                    "samples": [
+                        "can i have the check please",
+                        "can i have the bill ",
+                        "check please",
+                        "list my order items",
+                        "provide bill",
+                        "bill please",
+                        "Provide my order summary"
+                    ]
+                },
+                {
+                    "name": "orderStatusIntent",
+                    "slots": [],
+                    "samples": [
+                        "what is my order status",
+                        "how much time will it take",
+                        "estimated time please",
+                        "May i know my order status"
+                    ]
+                },
+                {
+                    "name": "customizeMessageIntent",
+                    "slots": [
+                        {
+                            "name": "customizationMessage",
+                            "type": "AMAZON.SearchQuery",
+                            "samples": [
+                                "{customizationMessage}"
+                            ]
+                        }
+                    ],
+                    "samples": [
+                        "I request {customizationMessage}",
+                        "i prefer {customizationMessage}",
+                        "i request you to {customizationMessage}",
+                        "add instructions {customizationMessage}",
+                        "inform chef that {customizationMessage}"
+                    ]
+                },
+                {
+                    "name": "personnelIntent",
+                    "slots": [],
+                    "samples": [
+                        "inform waiter to come here",
+                        "inform server to come to me",
+                        "call attendant",
+                        "call waiter",
+                        "call server",
+                        "call manager"
+                    ]
+                },
+                {
+                    "name": "ratingIntent",
+                    "slots": [
+                        {
+                            "name": "rating",
+                            "type": "AMAZON.NUMBER",
+                            "samples": [
+                                "{rating} for now",
+                                "i will go with {rating}",
+                                "{rating}"
+                            ]
+                        }
+                    ],
+                    "samples": [
+                        "i would like to give {rating} rating",
+                        "i want to give rating ",
+                        "i would like to give my feedback"
+                    ]
+                }
+            ],
+            "types": [
+                {
+                    "name": "menuItem",
+                    "values": [
+                        {
+                            "name": {
+                                "value": "doughnuts"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "pizza",
+                                "synonyms": [
+                                    "pizzas"
+                                ]
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "hot dogs",
+                                "synonyms": [
+                                    "hot dog"
+                                ]
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "hamberger",
+                                "synonyms": [
+                                    "hamburgers"
+                                ]
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "sandwich",
+                                "synonyms": [
+                                    "sandwiches"
+                                ]
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "idly",
+                                "synonyms": [
+                                    "idly sambar"
+                                ]
+                            }
+                        }
+                    ]
+                },
+                {
+                    "name": "mealType",
+                    "values": [
+                        {
+                            "name": {
+                                "value": "italian"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "chinese"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "breakfast"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "lunch"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "dinner",
+                                "synonyms": [
+                                    "supper"
+                                ]
+                            }
+                        }
+                    ]
+                }
+            ]
+        },
+        "dialog": {
+            "intents": [
+                {
+                    "name": "OrderIntent",
+                    "confirmationRequired": false,
+                    "prompts": {},
+                    "slots": [
+                        {
+                            "name": "menuItem",
+                            "type": "menuItem",
+                            "confirmationRequired": false,
+                            "elicitationRequired": true,
+                            "prompts": {
+                                "elicitation": "Elicit.Slot.797088480684.1224188297494"
+                            }
+                        },
+                        {
+                            "name": "quantity",
+                            "type": "AMAZON.NUMBER",
+                            "confirmationRequired": false,
+                            "elicitationRequired": true,
+                            "prompts": {
+                                "elicitation": "Elicit.Slot.797088480684.428430988721"
+                            }
+                        }
+                    ]
+                },
+                {
+                    "name": "ConfigIntent",
+                    "confirmationRequired": true,
+                    "prompts": {
+                        "confirmation": "Confirm.Intent.676908174480"
+                    },
+                    "slots": [
+                        {
+                            "name": "tableNumber",
+                            "type": "AMAZON.NUMBER",
+                            "confirmationRequired": false,
+                            "elicitationRequired": true,
+                            "prompts": {
+                                "elicitation": "Elicit.Slot.676908174480.235977513721"
+                            }
+                        }
+                    ]
+                },
+                {
+                    "name": "customizeMessageIntent",
+                    "confirmationRequired": false,
+                    "prompts": {},
+                    "slots": [
+                        {
+                            "name": "customizationMessage",
+                            "type": "AMAZON.SearchQuery",
+                            "confirmationRequired": false,
+                            "elicitationRequired": true,
+                            "prompts": {
+                                "elicitation": "Elicit.Slot.1488786577716.768994847576"
+                            }
+                        }
+                    ]
+                },
+                {
+                    "name": "ratingIntent",
+                    "confirmationRequired": false,
+                    "prompts": {},
+                    "slots": [
+                        {
+                            "name": "rating",
+                            "type": "AMAZON.NUMBER",
+                            "confirmationRequired": false,
+                            "elicitationRequired": true,
+                            "prompts": {
+                                "elicitation": "Elicit.Slot.547586356145.1362953719977"
+                            },
+                            "validations": [
+                                {
+                                    "type": "isLessThanOrEqualTo",
+                                    "prompt": "Slot.Validation.547586356145.1362953719977.575538382227",
+                                    "value": "5"
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ],
+            "delegationStrategy": "ALWAYS"
+        },
+        "prompts": [
+            {
+                "id": "Elicit.Slot.797088480684.428430988721",
+                "variations": [
+                    {
+                        "type": "PlainText",
+                        "value": "how many {menuItem} do you like to order?"
+                    },
+                    {
+                        "type": "PlainText",
+                        "value": "please provide quantity"
+                    },
+                    {
+                        "type": "PlainText",
+                        "value": "for how many?"
+                    }
+                ]
+            },
+            {
+                "id": "Elicit.Slot.797088480684.1224188297494",
+                "variations": [
+                    {
+                        "type": "PlainText",
+                        "value": "what do you want to order?"
+                    },
+                    {
+                        "type": "PlainText",
+                        "value": "what do you preffer?"
+                    }
+                ]
+            },
+            {
+                "id": "Confirm.Intent.676908174480",
+                "variations": [
+                    {
+                        "type": "PlainText",
+                        "value": "assigning this device to table number {tableNumber} . Is that fine?"
+                    },
+                    {
+                        "type": "PlainText",
+                        "value": "changing this device to table number {tableNumber} . Is it ok?"
+                    },
+                    {
+                        "type": "PlainText",
+                        "value": "modifing this device to table number {tableNumber} . Is that fine?"
+                    }
+                ]
+            },
+            {
+                "id": "Elicit.Slot.676908174480.235977513721",
+                "variations": [
+                    {
+                        "type": "PlainText",
+                        "value": "provide table number"
+                    },
+                    {
+                        "type": "PlainText",
+                        "value": "please provide the table number"
+                    }
+                ]
+            },
+            {
+                "id": "Elicit.Slot.1488786577716.768994847576",
+                "variations": [
+                    {
+                        "type": "PlainText",
+                        "value": "please provide your prefernces. If any"
+                    },
+                    {
+                        "type": "PlainText",
+                        "value": "please provide your insturctions to chef"
+                    }
+                ]
+            },
+            {
+                "id": "Elicit.Slot.547586356145.1362953719977",
+                "variations": [
+                    {
+                        "type": "PlainText",
+                        "value": "rating please"
+                    },
+                    {
+                        "type": "PlainText",
+                        "value": "please provide your valuable rating"
+                    }
+                ]
+            },
+            {
+                "id": "Slot.Validation.547586356145.1362953719977.575538382227",
+                "variations": [
+                    {
+                        "type": "PlainText",
+                        "value": "rate from one to five"
+                    },
+                    {
+                        "type": "PlainText",
+                        "value": "can be morethan five"
+                    }
+                ]
+            }
+        ]
+    }
+}
